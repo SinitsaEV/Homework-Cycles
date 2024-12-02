@@ -9,19 +9,19 @@ namespace MasteringCycles
         {
             Console.OutputEncoding = Encoding.Unicode;
 
-            const string FirstMessage = "1 message";
-            const string SecondMessage = "2 message";
+            const string Description = "help";
+            const string AuthorsLinks = "contacts";
             const string RandomNumber = "random";
             const string ClearConsole = "clear";
             const string ExitWord = "exit";
 
             Random random = new Random();
-            string firstMessageText = " Синица ";
-            string secondMessageText = " Евгений ";
+            string DescriptionText = " Описание Программы ";
+            string AuthorsLinksText = " Ссылки на авторов ";
 
             string playerInput;
 
-            Console.WriteLine(" Список команд: \n - 1 message\n - 2 message\n - random\n - clear\n - exit");
+            Console.WriteLine($" Список команд: \n - {Description}\n - {AuthorsLinks}\n - random\n - {ClearConsole}\n - {ExitWord}");
             Console.WriteLine(" Введите команду ");
 
             playerInput = Console.ReadLine();
@@ -30,18 +30,22 @@ namespace MasteringCycles
             {
                 switch (playerInput)
                 {
-                    case FirstMessage:
-                        Console.WriteLine(firstMessageText);
+                    case Description:
+                        Console.WriteLine(DescriptionText);
                         break;
-                    case SecondMessage:
-                        Console.WriteLine(secondMessageText);
+                        
+                    case AuthorsLinks:
+                        Console.WriteLine(AuthorsLinksText);
                         break;
+                        
                     case ClearConsole:
                         Console.Clear();
                         break;
+                        
                     case RandomNumber:
                         Console.WriteLine(random.Next());
                         break;
+                        
                     default:
                         Console.WriteLine("Нет такой команды.");
                         break;
