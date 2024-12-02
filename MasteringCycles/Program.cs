@@ -7,20 +7,25 @@ namespace MasteringCycles
     {
         static void Main(string[] args)
         {
-            int maxValue = 103;
-            int step = 7;
-            int currentValue = 5;
+            Console.OutputEncoding = Encoding.Unicode;
 
-            while(currentValue <= maxValue)
-            {
-                Console.WriteLine(currentValue);
-                currentValue += step;
-            }
+            int maxValue = 101;
+            int minValue = 0;
+            int sum = 0;
 
-            for (currentValue = 5; currentValue <= maxValue; currentValue += step)
+            Random random = new Random();
+            int number = random.Next(minValue, maxValue);
+
+            Console.WriteLine($"Ваше случайное число {number}");
+
+            for (int i = 1; i <= number; i++)
             {
-                Console.WriteLine(currentValue);
+                if (i % 3 == 0 || i % 5 == 0)
+                {
+                    sum += i;
+                }
             }
+            Console.WriteLine($"Сумма чисел кратных 3 или 5 от 0 до {number} равна: {sum}");
         }
     }
 }
