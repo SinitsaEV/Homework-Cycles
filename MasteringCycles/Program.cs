@@ -7,20 +7,20 @@ namespace MasteringCycles
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.Unicode;
-            Console.InputEncoding = Encoding.Unicode;
+            int maxValue = 103;
+            int step = 7;
+            int currentValue = 5;
 
-            string playerInput;
-            string exitWord = "exit";
-
-            Console.WriteLine("Введите exit для выхода");
-
-            while ((playerInput = Console.ReadLine()) != exitWord)
+            while(currentValue <= maxValue)
             {
-                Console.WriteLine("Вы в программе");
+                Console.WriteLine(currentValue);
+                currentValue += step;
             }
 
-            Console.WriteLine("Вы вышли");            
+            for (currentValue = 5; currentValue <= maxValue; currentValue += step)
+            {
+                Console.WriteLine(currentValue);
+            }
         }
     }
 }
