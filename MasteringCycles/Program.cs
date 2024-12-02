@@ -10,18 +10,17 @@ namespace MasteringCycles
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            string message;
-            int repeats;
+            string playerInput;
+            string exitWord = "exit";
 
-            Console.Write("Введите сообщение: ");
-            message = Console.ReadLine();
-            Console.Write("Введите количество повторений: ");
-            repeats = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите exit для выхода");
 
-            for (int i = 0; i < repeats; i++)
+            while ((playerInput = Console.ReadLine()) != exitWord)
             {
-                Console.WriteLine(message);
+                Console.WriteLine("Вы в программе");
             }
+
+            Console.WriteLine("Вы вышли");            
         }
     }
 }
