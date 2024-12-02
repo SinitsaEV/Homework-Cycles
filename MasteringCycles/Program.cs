@@ -16,8 +16,8 @@ namespace MasteringCycles
             const string ExitWord = "exit";
 
             Random random = new Random();
-            string DescriptionText = " Описание Программы ";
-            string AuthorsLinksText = " Ссылки на авторов ";
+            string descriptionText = " Описание Программы ";
+            string authorsLinksText = " Ссылки на авторов ";
 
             string playerInput;
 
@@ -31,11 +31,11 @@ namespace MasteringCycles
                 switch (playerInput)
                 {
                     case Description:
-                        Console.WriteLine(DescriptionText);
+                        Console.WriteLine(descriptionText);
                         break;
                         
                     case AuthorsLinks:
-                        Console.WriteLine(AuthorsLinksText);
+                        Console.WriteLine(authorsLinksText);
                         break;
                         
                     case ClearConsole:
