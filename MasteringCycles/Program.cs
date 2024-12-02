@@ -12,7 +12,8 @@ namespace MasteringCycles
             int maxValue = 101;
             int minValue = 0;
             int sum = 0;
-            int dividerThree = 3, dividerFive = 5;
+            int firstDivider = 3;
+            int secondDivider = 5;
 
             Random random = new Random();
             int number = random.Next(minValue, maxValue);
@@ -21,12 +22,13 @@ namespace MasteringCycles
 
             for (int i = 1; i <= number; i++)
             {
-                if (i % dividerThree == 0 || i % dividerFive == 0)
+                if (i % firstDivider == 0 || i % secondDivider == 0)
                 {
                     sum += i;
                 }
             }
-            Console.WriteLine($"Сумма чисел кратных 3 или 5 от 0 до {number} равна: {sum}");
+            
+            Console.WriteLine($"Сумма чисел кратных {firstDivider} или {secondDivider} от 0 до {number} равна: {sum}");
         }
     }
 }
