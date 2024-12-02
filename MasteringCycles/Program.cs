@@ -12,6 +12,7 @@ namespace MasteringCycles
             int maxValue = 101;
             int minValue = 0;
             int sum = 0;
+            int dividerThree = 3, dividerFive = 5;
 
             Random random = new Random();
             int number = random.Next(minValue, maxValue);
@@ -20,7 +21,7 @@ namespace MasteringCycles
 
             for (int i = 1; i <= number; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                if (i % dividerThree == 0 || i % dividerFive == 0)
                 {
                     sum += i;
                 }
