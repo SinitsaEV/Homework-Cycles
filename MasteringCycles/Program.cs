@@ -9,23 +9,47 @@ namespace MasteringCycles
         {
             Console.OutputEncoding = Encoding.Unicode;
 
-            int maxValue = 101;
-            int minValue = 0;
-            int sum = 0;
+            const string FirstMessage = "1 message";
+            const string SecondMessage = "2 message";
+            const string RandomNumber = "random";
+            const string ClearConsole = "clear";
+            const string ExitWord = "exit";
 
             Random random = new Random();
-            int number = random.Next(minValue, maxValue);
+            string firstMessageText = " Синица ";
+            string secondMessageText = " Евгений ";
 
-            Console.WriteLine($"Ваше случайное число {number}");
+            string playerInput;
 
-            for (int i = 1; i <= number; i++)
+            Console.WriteLine(" Список команд: \n - 1 message\n - 2 message\n - random\n - clear\n - exit");
+            Console.WriteLine(" Введите команду ");
+
+            playerInput = Console.ReadLine();
+
+            while (playerInput != ExitWord)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                switch (playerInput)
                 {
-                    sum += i;
+                    case FirstMessage:
+                        Console.WriteLine(firstMessageText);
+                        break;
+                    case SecondMessage:
+                        Console.WriteLine(secondMessageText);
+                        break;
+                    case ClearConsole:
+                        Console.Clear();
+                        break;
+                    case RandomNumber:
+                        Console.WriteLine(random.Next());
+                        break;
+                    default:
+                        Console.WriteLine("Нет такой команды.");
+                        break;
                 }
+
+                playerInput = Console.ReadLine();
             }
-            Console.WriteLine($"Сумма чисел кратных 3 или 5 от 0 до {number} равна: {sum}");
+
         }
     }
 }
