@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace MasteringCycles
@@ -21,14 +21,9 @@ namespace MasteringCycles
 
             Console.OutputEncoding = Encoding.Unicode;
 
-            while (currentNumber <= maxValueRange)
+            for (int i = divider; i <= maxValueRange; i += divider)
             {
-                if (currentNumber >= minValueRange)
-                {
-                    multiples++;                    
-                }
-
-                currentNumber += divider;
+                multiples++;
             }
 
             Console.WriteLine($"В диапозоне от {minValueRange} до {maxValueRange}, {multiples} чисел кратных {divider}.");
