@@ -7,28 +7,31 @@ namespace MasteringCycles
     {
         static void Main(string[] args)
         {
-            string password = "HardPassword";
-            int triesCount = 3;
-            string playerInput;
-            string secretDocuments = " Global secrets ";
+            Random random = new Random();
+
+            int maxValueDivider = 26;
+            int minValueDivider = 10;
+            int divider = random.Next(minValueDivider, maxValueDivider);
+
+            int maxValueRange = 150;
+            int minValueRange = 50;
+
+            int multiples = 0;
+            int currentNumber = divider;
 
             Console.OutputEncoding = Encoding.Unicode;
-            Console.InputEncoding = Encoding.Unicode;
 
-            while (triesCount-- > 0)
+            while (currentNumber <= maxValueRange)
             {
-                Console.WriteLine(" Введите пароль. ");
-                playerInput = Console.ReadLine();
+                if (currentNumber >= minValueRange)
+                {
+                    multiples++;                    
+                }
 
-                if (playerInput == password)
-                {
-                    Console.WriteLine($" Доступ разрешен. \n {secretDocuments} ");
-                }
-                else
-                {
-                    Console.WriteLine($" Введен не верный пароль, осталось попыток: {triesCount}. ");
-                }
+                currentNumber += divider;
             }
+
+            Console.WriteLine($"В диапозоне от {minValueRange} до {maxValueRange}, {multiples} чисел кратных {divider}.");
         }
     }
 }
