@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace MasteringCycles
@@ -9,8 +9,6 @@ namespace MasteringCycles
         {
             string borderSymbol;
             string playerName;
-            int borderWidth = 1;
-            int borderCount = 2;
 
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
@@ -21,22 +19,16 @@ namespace MasteringCycles
             borderSymbol = Console.ReadLine();
 
             string outputNameString = borderSymbol + playerName + borderSymbol;
+            string borderString = "";
 
-            for (int i = 0; i <= borderCount * borderWidth; i++) 
+            for (int i = 0; i < outputNameString.Length; i++)
             {
-                for (int j = 0; j < outputNameString.Length; j++)
-                {
-                    if (i == borderWidth)
-                    {
-                        Console.Write(outputNameString);
-                        break;
-                    }
-
-                    Console.Write(borderSymbol);
-                }
-
-                Console.WriteLine();
+                borderString += borderSymbol;
             }
+
+            Console.WriteLine(borderString);
+            Console.WriteLine(outputNameString);
+            Console.WriteLine(borderString);
         }
     }
 }
