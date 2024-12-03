@@ -7,35 +7,27 @@ namespace MasteringCycles
     {
         static void Main(string[] args)
         {
-            string borderSymbol;
-            string playerName;
-            int borderWidth = 1;
-            int borderCount = 2;
+            string password = "HardPassword";
+            int triesCount = 3;
+            string playerInput;
+            string secretDocuments = " Global secrets ";
 
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            Console.Write(" Введите Ваше имя: ");
-            playerName = Console.ReadLine();
-            Console.Write(" Введите символ: ");
-            borderSymbol = Console.ReadLine();
-
-            string outputNameString = borderSymbol + playerName + borderSymbol;
-
-            for (int i = 0; i <= borderCount * borderWidth; i++) 
+            while (triesCount-- > 0)
             {
-                for (int j = 0; j < outputNameString.Length; j++)
+                Console.WriteLine(" Введите пароль. ");
+                playerInput = Console.ReadLine();
+
+                if (playerInput == password)
                 {
-                    if (i == borderWidth)
-                    {
-                        Console.Write(outputNameString);
-                        break;
-                    }
-
-                    Console.Write(borderSymbol);
+                    Console.WriteLine($" Доступ разрешен. \n {secretDocuments} ");
                 }
-
-                Console.WriteLine();
+                else
+                {
+                    Console.WriteLine($" Введен не верный пароль, осталось попыток: {triesCount}. ");
+                }
             }
         }
     }
