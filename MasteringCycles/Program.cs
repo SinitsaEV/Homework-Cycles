@@ -9,29 +9,19 @@ namespace MasteringCycles
         {
             Random random = new Random();
 
-            int maxValueDivider = 26;
-            int minValueDivider = 10;
-            int divider = random.Next(minValueDivider, maxValueDivider);
-
-            int maxValueRange = 150;
-            int minValueRange = 50;
-
-            int multiples = 0;
-            int currentNumber = divider;
+            int randomNumber = random.Next();
+            int currentValue = 1;
+            int degreeOfNumber = 2;
+            int minDegree = 0;
 
             Console.OutputEncoding = Encoding.Unicode;
 
-            while (currentNumber <= maxValueRange)
+            while (currentValue < randomNumber )
             {
-                if (currentNumber >= minValueRange)
-                {
-                    multiples++;                    
-                }
-
-                currentNumber += divider;
+                minDegree++;
+                currentValue *= degreeOfNumber;
             }
-
-            Console.WriteLine($"В диапозоне от {minValueRange} до {maxValueRange}, {multiples} чисел кратных {divider}.");
+            Console.WriteLine($" случайное число: {randomNumber}, минимальная степень {minDegree}, число в этой степени {currentValue}");
         }
     }
 }
