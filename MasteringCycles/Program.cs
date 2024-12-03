@@ -12,17 +12,17 @@ namespace MasteringCycles
             int randomNumber = random.Next();
             int degreeOfNumber = 2;
             int desiredNumber = 1;
-            int minDegree = 0;
+            int desiredDegree = 0;
 
             Console.OutputEncoding = Encoding.Unicode;
 
             while (desiredNumber <= randomNumber)
             {
-                minDegree++;
+                desiredDegree++;
                 desiredNumber *= degreeOfNumber;
             }
 
-            Console.WriteLine($" случайное число: {randomNumber}, минимальная степень {minDegree}, число в этой степени {desiredNumber}");
+            Console.WriteLine($" случайное число: {randomNumber}, минимальная степень {desiredDegree}, число в этой степени {desiredNumber}");
         }
     }
 }
