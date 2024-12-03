@@ -10,18 +10,19 @@ namespace MasteringCycles
             Random random = new Random();
 
             int randomNumber = random.Next();
-            int currentValue = 1;
             int degreeOfNumber = 2;
+            int minNumber = 1;
             int minDegree = 0;
 
             Console.OutputEncoding = Encoding.Unicode;
 
-            while (currentValue < randomNumber )
+            while (minNumber < randomNumber )
             {
                 minDegree++;
-                currentValue *= degreeOfNumber;
+                minNumber *= degreeOfNumber;
             }
-            Console.WriteLine($" случайное число: {randomNumber}, минимальная степень {minDegree}, число в этой степени {currentValue}");
+            
+            Console.WriteLine($" случайное число: {randomNumber}, минимальная степень {minDegree}, число в этой степени {minNumber}");
         }
     }
 }
