@@ -20,18 +20,16 @@ namespace MasteringCycles
             Console.Write(" Введите символ: ");
             borderSymbol = Console.ReadLine();
 
+            string outputNameString = borderSymbol + playerName + borderSymbol;
+
             for (int i = 0; i <= borderCount * borderWidth; i++) 
             {
-
-                for (int j = 0; j < borderCount * borderWidth + playerName.Length; j++)
+                for (int j = 0; j < outputNameString.Length; j++)
                 {
                     if (i == borderWidth)
                     {
-                        if (j >= borderWidth && j < borderWidth + playerName.Length)
-                        {
-                            Console.Write(playerName[j - borderWidth]);
-                            continue;
-                        }
+                        Console.Write(outputNameString);
+                        break;
                     }
 
                     Console.Write(borderSymbol);
