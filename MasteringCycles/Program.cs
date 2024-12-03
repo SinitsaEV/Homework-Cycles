@@ -22,7 +22,6 @@ namespace MasteringCycles
 
             for (int i = 0; i <= borderCount * borderWidth; i++) 
             {
-
                 for (int j = 0; j < borderCount * borderWidth + playerName.Length; j++)
                 {
                     if (i == borderWidth)
