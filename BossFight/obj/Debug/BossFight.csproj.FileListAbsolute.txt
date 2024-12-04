@@ -1,0 +1,7 @@
+C:\Users\Courses\Desktop\Course\C#_Junior\BasicsOfProgramming\BossFight\BossFight\bin\Debug\BossFight.exe.config
+C:\Users\Courses\Desktop\Course\C#_Junior\BasicsOfProgramming\BossFight\BossFight\bin\Debug\BossFight.exe
+C:\Users\Courses\Desktop\Course\C#_Junior\BasicsOfProgramming\BossFight\BossFight\bin\Debug\BossFight.pdb
+C:\Users\Courses\Desktop\Course\C#_Junior\BasicsOfProgramming\BossFight\BossFight\obj\Debug\BossFight.csproj.AssemblyReference.cache
+C:\Users\Courses\Desktop\Course\C#_Junior\BasicsOfProgramming\BossFight\BossFight\obj\Debug\BossFight.csproj.CoreCompileInputs.cache
+C:\Users\Courses\Desktop\Course\C#_Junior\BasicsOfProgramming\BossFight\BossFight\obj\Debug\BossFight.exe
+C:\Users\Courses\Desktop\Course\C#_Junior\BasicsOfProgramming\BossFight\BossFight\obj\Debug\BossFight.pdb
